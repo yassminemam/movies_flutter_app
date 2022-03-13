@@ -1,5 +1,8 @@
+import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:movies_flutter_app/view/routes/app_pages.dart';
+import 'package:video_player/video_player.dart';
 import '../../../model/movies_list_response.dart';
 import '../../../view_model/provider/remote/movies_api.dart';
 
@@ -9,6 +12,11 @@ class WatchController extends GetxController {
   Rx<List<Results>> filteredMovies = Rx<List<Results>>([]);
   Rx<Results?> selectedMovie = Rx<Results?>(null);
   RxString searchWord = "".obs;
+  String movieURL = "http://movietrailers.apple.com/movies/sony_pictures/alpha/alpha-trailer-2_h480p.mov";
+  late Rx<FlickManager> flickManager = Rx<FlickManager>(FlickManager(
+    videoPlayerController: VideoPlayerController.network(movieURL),
+    onVideoEnd: ()=> Get.offAndToNamed(AppRoutes.MOVIE_DETAILS)
+  ));
   final Rx<TextEditingController> searchController =
       TextEditingController(text: "").obs;
 
@@ -16,6 +24,12 @@ class WatchController extends GetxController {
   void onInit() async {
     super.onInit();
     await getAllMoviesList();
+  }
+
+  @override
+  void dispose() {
+    flickManager.value.dispose();
+    super.dispose();
   }
 
   getAllMoviesList() async {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:movies_flutter_app/utils.dart';
-import 'package:movies_flutter_app/view/core/bindings/watch_controller.dart';
+import 'package:movies_flutter_app/view/core/controllers/watch_controller.dart';
 import '../../../model/movies_list_response.dart';
 import '../../routes/app_pages.dart';
 
@@ -12,7 +12,7 @@ Widget ListItem(Results value, WatchController controller) {
   return InkWell(
     onTap: () {
       controller.selectedMovie.value = value;
-      Get.toNamed(AppRoutes.MOVIE_DETAILS);
+      Get.toNamed(AppRoutes.MOVIE_TRAILER);
     },
     child: Card(
       shape: RoundedRectangleBorder(

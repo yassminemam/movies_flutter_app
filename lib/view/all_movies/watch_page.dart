@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:movies_flutter_app/view/core/bindings/watch_controller.dart';
+import 'package:movies_flutter_app/view/core/controllers/watch_controller.dart';
 import 'package:movies_flutter_app/view/routes/app_pages.dart';
 import '../../strings.dart';
 import '../../utils.dart';

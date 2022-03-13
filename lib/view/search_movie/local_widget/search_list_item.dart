@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:movies_flutter_app/view/routes/app_pages.dart';
 import '../../../model/movies_list_response.dart';
 import '../../../utils.dart';
-import '../../core/bindings/watch_controller.dart';
+import '../../core/controllers/watch_controller.dart';
 
 Widget SearchListItem(Results value, WatchController watchController) {
   return Padding(
@@ -60,7 +60,7 @@ Widget SearchListItem(Results value, WatchController watchController) {
             child: InkWell(
           onTap: () {
             watchController.selectedMovie.value = value;
-            Get.toNamed(AppRoutes.MOVIE_DETAILS);
+            Get.toNamed(AppRoutes.MOVIE_TRAILER);
           },
           child: const Align(
             alignment: Alignment.centerRight,

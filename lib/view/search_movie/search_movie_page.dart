@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:movies_flutter_app/strings.dart';
-import 'package:movies_flutter_app/view/core/bindings/watch_controller.dart';
+import 'package:movies_flutter_app/view/core/controllers/watch_controller.dart';
 import '../../utils.dart';
 import 'local_widget/search_list_item.dart';
 

@@ -5,7 +5,8 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:movies_flutter_app/strings.dart';
-import 'package:movies_flutter_app/view/core/bindings/watch_controller.dart';
+import 'package:movies_flutter_app/view/core/controllers/watch_controller.dart';
+import 'package:movies_flutter_app/view/routes/app_pages.dart';
 import '../../utils.dart';
 
 class MovieDetailsPage extends GetView<WatchController> {
@@ -104,7 +105,7 @@ class MovieDetailsPage extends GetView<WatchController> {
                                 height: 20,
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: () {Get.toNamed(AppRoutes.MOVIE_TRAILER);},
                                 child: Container(
                                   width: 243,
                                   height: 50,
