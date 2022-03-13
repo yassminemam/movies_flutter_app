@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:movies_flutter_app/strings.dart';
 import 'package:movies_flutter_app/view/core/bindings/watch_controller.dart';
 import '../../utils.dart';
 import 'local_widget/search_list_item.dart';
@@ -136,7 +137,7 @@ class SearchMoviePage extends GetView<WatchController> {
                                 Icons.dashboard,
                                 color: Utils.gray,
                               ),
-                              label: "Dashboard",
+                              label: AppStrings.dashboard,
                             ),
                             BottomNavigationBarItem(
                                 icon: Icon(
@@ -146,13 +147,13 @@ class SearchMoviePage extends GetView<WatchController> {
                                 activeIcon: Icon(
                                   Icons.play_circle_fill_outlined,
                                 ),
-                                label: "Watch"),
+                                label: AppStrings.watch),
                             BottomNavigationBarItem(
                                 icon: Icon(
                                   Icons.perm_media,
                                   color: Utils.gray,
                                 ),
-                                label: "Media Library"),
+                                label: AppStrings.media_lib),
                             BottomNavigationBarItem(
                                 icon: Icon(
                                   Icons.menu_outlined,
@@ -162,7 +163,7 @@ class SearchMoviePage extends GetView<WatchController> {
                                   Icons.menu_outlined,
                                   color: Utils.gray,
                                 ),
-                                label: "More")
+                                label: AppStrings.more)
                           ],
                         ),
                       )),

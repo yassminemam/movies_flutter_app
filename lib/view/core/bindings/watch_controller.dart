@@ -4,7 +4,7 @@ import '../../../model/movies_list_response.dart';
 import '../../../view_model/provider/remote/movies_api.dart';
 
 class WatchController extends GetxController {
-  final MoviesApi _walletApi = Get.find<MoviesApi>();
+  final MoviesApi _moviesApi = Get.find<MoviesApi>();
   Rx<List<Results>> allMovies = Rx<List<Results>>([]);
   Rx<List<Results>> filteredMovies = Rx<List<Results>>([]);
   Rx<Results?> selectedMovie = Rx<Results?>(null);
@@ -19,7 +19,7 @@ class WatchController extends GetxController {
   }
 
   getAllMoviesList() async {
-    var moviesListResponse = await _walletApi.getMoviesList();
+    var moviesListResponse = await _moviesApi.getMoviesList();
     if (moviesListResponse.statusCode == 200) {
       var responseObj = MoviesListResponse.fromJson(moviesListResponse.data);
       allMovies.value = responseObj.results;

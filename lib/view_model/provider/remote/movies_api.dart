@@ -14,13 +14,4 @@ class MoviesApi{
       return dioError.response;
     }
   }
-
-  Future  getMovieImagesList(String movieId) async {
-    try {
-      final response = await _dio.get("https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${Utils.api_key}");
-      return response;
-    } on DioError catch (dioError) {
-      return dioError.response;
-    }
-  }
 }

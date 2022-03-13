@@ -85,7 +85,7 @@ class WatchPage extends GetView<WatchController> {
                           currentIndex: 1,
                           selectedIconTheme: IconThemeData(color: Colors.white),
                           unselectedIconTheme:
-                              IconThemeData(color: Colors.black12),
+                          IconThemeData(color: Colors.black12),
                           backgroundColor: Utils.dark_purple,
                           selectedItemColor: Colors.white,
                           type: BottomNavigationBarType.fixed,
@@ -96,7 +96,7 @@ class WatchPage extends GetView<WatchController> {
                                 Icons.dashboard,
                                 color: Utils.gray,
                               ),
-                              label: "Dashboard",
+                              label: AppStrings.dashboard,
                             ),
                             BottomNavigationBarItem(
                                 icon: Icon(
@@ -106,13 +106,13 @@ class WatchPage extends GetView<WatchController> {
                                 activeIcon: Icon(
                                   Icons.play_circle_fill_outlined,
                                 ),
-                                label: "Watch"),
+                                label: AppStrings.watch),
                             BottomNavigationBarItem(
                                 icon: Icon(
                                   Icons.perm_media,
                                   color: Utils.gray,
                                 ),
-                                label: "Media Library"),
+                                label: AppStrings.media_lib),
                             BottomNavigationBarItem(
                                 icon: Icon(
                                   Icons.menu_outlined,
@@ -122,7 +122,7 @@ class WatchPage extends GetView<WatchController> {
                                   Icons.menu_outlined,
                                   color: Utils.gray,
                                 ),
-                                label: "More")
+                                label: AppStrings.more)
                           ],
                         ),
                       )),

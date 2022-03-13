@@ -11,7 +11,7 @@ class WatchBindings extends Bindings {
     Get.put<Dio>(Dio());
     Get.put<MoviesApi>(MoviesApi());
     Get.put<MoviesLocalRepo>(MoviesLocalRepo());;
-    Get.put<WatchController>(WatchController());
+    Get.lazyPut(() => WatchController());
 
   }
 }
